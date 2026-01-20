@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="v-kernel-host">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANTIX // ZENITH COMMAND</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;800&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../styles/settings.css">
+</head>
+
+<body class="v-dashboard">
+
+    <div id="v-notification-dispatcher"></div>
+
+    <div class="v-system-bg">
+        <div class="v-scanline"></div>
+        <div class="v-noise"></div>
+        <div class="v-grid-engine"></div>
+    </div>
+
+    <div class="v-app-shell">
+        <header class="v-top-hub">
+            <div class="v-brand-container">
+                <div class="v-brand-icon">
+                    <svg viewBox="0 0 100 100">
+                        <path d="M10 30 L50 90 L90 30" fill="none" stroke="currentColor" stroke-width="12" />
+                    </svg>
+                </div>
+                <div class="v-brand-labels">
+                    <span class="v-brand-main">SETTINGS</span>
+                </div>
+            </div>
+
+            <nav class="v-main-nav">
+                <button class="v-nav-item active" data-target="appearance">
+                    <span class="v-nav-hex"></span> APPEARANCE
+                </button>
+                <button class="v-nav-item" data-target="cloaking">
+                    <span class="v-nav-hex"></span> CLOAKING
+                </button>
+                <button class="v-nav-item" data-target="security">
+                    <span class="v-nav-hex"></span> SECURITY
+                </button>
+                <button class="v-nav-item" data-target="kernel">
+                    <span class="v-nav-hex"></span> DATA
+                </button>
+            </nav>
+
+            <div class="v-top-stats">
+                <div class="v-clock-block">
+                    <small>SYSTEM TIME</small>
+                    <span id="v-live-clock">00:00:00</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="v-main-layout">
+            <aside class="v-sidebar-diag">
+                <div class="v-diag-card">
+                    <div class="v-diag-header">STATUS</div>
+                    <div class="v-diag-body">
+                        <div class="v-status-row">
+                            <label>STATUS</label>
+                            <span class="v-tag-success">ONLINE</span>
+                        </div>
+                        <div class="v-status-row">
+                            <label>THEME</label>
+                            <span id="v-active-theme-label" class="v-tag-accent">DEFAULT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="v-diag-card">
+                    <div class="v-diag-header">STORAGE UTILIZATION</div>
+                    <div class="v-diag-body">
+                        <div class="v-storage-meter">
+                            <div id="v-storage-bar" class="v-storage-fill"></div>
+                        </div>
+                        <div class="v-storage-meta">
+                            <span id="v-storage-used">0.0 KB</span>
+                            <span>10.0 MB MAX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="v-diag-card v-flex-grow">
+                    <div class="v-diag-header">LIVE LOG STREAM</div>
+                    <div id="v-kernel-terminal" class="v-terminal-output">
+                        <div class="v-log-line">Initializing Zenith Kernel...</div>
+                        <div class="v-log-line">Connecting to LocalStorage...</div>
+                    </div>
+                </div>
+
+                <div class="v-sidebar-footer">
+                    VANTIX V2.1
+                </div>
+            </aside>
+
+            <main class="v-viewport">
+
+                <section id="panel-appearance" class="v-panel active">
+                    <header class="v-panel-header">
+                        <h1>Appearance Architecture</h1>
+                        <p>Modify the visual appearance of Vantix</p>
+                    </header>
+
+                    <div class="v-grid-container">
+                        <div class="v-config-card glass">
+                            <div class="v-input-block">
+                                <label class="v-label">UI THEME PRESET</label>
+                                <select id="v-theme-select" class="v-select">
+                                    <option value="default">Vantix Default</option>
+                                    <option value="midnight">Midnight</option>
+                                    <option value="mocha">Catppuccin Mocha</option>
+                                    <option value="noir">Noir (Absolute)</option>
+                                    <option value="cyberpunk">Cyberpunk Neon</option>
+                                    <option value="strawberry">Strawberry Jam</option>
+                                    <option value="emerald">Emerald City</option>
+                                    <option value="lavender">Lavender</option>
+                                    <option value="deep-space">Deep Space</option>
+                                    <option value="sunset-blaze">Sunset Blaze</option>
+                                    <option value="light">Light Mode</option>
+                                </select>
+                            </div>
+
+                            <div class="v-input-block">
+                                <label class="v-label">WALLPAPER SOURCE (URL)</label>
+                                <input type="text" id="v-bg-url" class="v-input" placeholder="https://imgur.com/...">
+                            </div>
+
+                            <div class="v-button-grid">
+                                <button class="v-btn v-btn-prime" id="v-save-appearance">SAVE CHANGES</button>
+                                <label class="v-btn v-btn-sec">
+                                    UPLOAD IMAGE
+                                    <input type="file" id="v-bg-upload" hidden accept="image/*">
+                                </label>
+                                <button class="v-btn v-btn-danger" id="v-purge-bg">REMOVE BG</button>
+                            </div>
+                        </div>
+
+                        <div class="v-config-card glass preview-wrap">
+                            <label class="v-label">INTERFACE PREVIEW</label>
+                            <div id="v-mock-ui" class="v-mock-shell">
+                                <div class="mock-nav"></div>
+                                <div class="mock-body">
+                                    <div class="mock-sidebar"></div>
+                                    <div class="mock-content">
+                                        <div class="mock-line"></div>
+                                        <div class="mock-line-short"></div>
+                                        <div class="mock-boxes"><span></span><span></span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="v-info-box">
+                                <strong>STABILITY NOTE</strong>
+                                <p>Themes are stored within cookies locally to improve optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="panel-cloaking" class="v-panel">
+                    <header class="v-panel-header">
+                        <h1>Tab Disguise Engine</h1>
+                        <p>Change the icon & name of the tab to avoid detection.</p>
+                    </header>
+
+                    <div class="v-config-card glass">
+                        <div class="v-preset-grid">
+                            <div class="v-preset-item" data-title="Google"
+                                data-icon="https://www.google.com/favicon.ico">
+                                <img src="https://www.google.com/favicon.ico" alt="">
+                                <span>Google</span>
+                            </div>
+                            <div class="v-preset-item" data-title="Home - Classroom"
+                                data-icon="https://ssl.gstatic.com/classroom/favicon.png">
+                                <img src="https://ssl.gstatic.com/classroom/favicon.png" alt="">
+                                <span>Classroom</span>
+                            </div>
+                            <div class="v-preset-item" data-title="Clever | Portal"
+                                data-icon="https://assets.clever.com/favicon.ico">
+                                <img src="https://assets.clever.com/favicon.ico" alt="">
+                                <span>Clever</span>
+                            </div>
+                            <div class="v-preset-item" data-title="My Drive"
+                                data-icon="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png">
+                                <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png"
+                                    alt="">
+                                <span>Drive</span>
+                            </div>
+                        </div>
+
+                        <div class="v-input-row mt-20">
+                            <div class="v-input-block">
+                                <label class="v-label">TITLE</label>
+                                <input type="text" id="v-cloak-title" class="v-input" placeholder="Classes">
+                            </div>
+                            <div class="v-input-block">
+                                <label class="v-label">FAVICON URL</label>
+                                <input type="text" id="v-cloak-icon" class="v-input" placeholder="https://...">
+                            </div>
+                        </div>
+
+                        <button class="v-btn v-btn-prime full" id="v-save-cloak">DEPLOY CLOAK</button>
+                    </div>
+                </section>
+
+                <section id="panel-security" class="v-panel">
+                    <h1 class="v-title">Security Protocols</h1>
+                    <div class="v-grid-container">
+                        <div class="v-config-card glass">
+                            <div class="v-card-head">
+                                <h3>Panic Switch</h3>
+                                <p>Emergency hotkey for immediate site redirection.</p>
+                            </div>
+                            <div class="v-input-block">
+                                <label class="v-label">PANIC HOTKEY</label>
+                                <input type="text" id="v-panic-key" class="v-input" placeholder="e.g. ` or Escape">
+                            </div>
+                            <div class="v-input-block">
+                                <label class="v-label">REDIRECT DESTINATION</label>
+                                <input type="text" id="v-panic-url" class="v-input" placeholder="https://google.com">
+                            </div>
+                            <button class="v-btn v-btn-prime" id="v-save-panic">ARM PANIC BUTTON</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="panel-kernel" class="v-panel">
+                    <h1 class="v-title">Data Management</h1>
+                    <div class="v-kernel-grid">
+                        <div class="v-config-card glass">
+                            <div class="v-card-head">
+                                <h3>Data Transfer</h3>
+                                <p>Export or import your settings and preferences.</p>
+                            </div>
+                            <div class="v-button-grid">
+                                <button class="v-btn v-btn-prime" id="v-download-data">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="display: inline-block; margin-right: 8px; vertical-align: middle;">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="7 10 12 15 17 10"></polyline>
+                                        <line x1="12" y1="15" x2="12" y2="3"></line>
+                                    </svg>
+                                    EXPORT DATA
+                                </button>
+                                <label class="v-btn v-btn-sec">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="display: inline-block; margin-right: 8px; vertical-align: middle;">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                        <polyline points="17 8 12 3 7 8"></polyline>
+                                        <line x1="12" y1="3" x2="12" y2="15"></line>
+                                    </svg>
+                                    IMPORT DATA
+                                    <input type="file" id="v-upload-data" hidden accept=".save">
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="v-data-stats-grid">
+                            <div class="v-data-stat-card">
+                                <div class="v-stat-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                    </svg>
+                                </div>
+                                <div class="v-stat-content">
+                                    <label class="v-stat-label">TOTAL STORAGE</label>
+                                    <span id="v-total-storage" class="v-stat-value">0.0 KB</span>
+                                </div>
+                            </div>
+
+                            <div class="v-data-stat-card">
+                                <div class="v-stat-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="1"></circle>
+                                        <path d="M12 8v-2m0 14v-2"></path>
+                                        <path d="M12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16z"></path>
+                                    </svg>
+                                </div>
+                                <div class="v-stat-content">
+                                    <label class="v-stat-label">CACHE SIZE</label>
+                                    <span id="v-cache-size" class="v-stat-value">0.0 KB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="v-config-card glass danger-zone">
+                        <div class="v-card-head">
+                            <h3 class="text-danger">Factory Reset</h3>
+                            <p>This action will delete all settings, themes, and uploaded assets.</p>
+                        </div>
+                        <button class="v-btn v-btn-danger full" id="v-factory-reset">EXECUTE HARD RESET</button>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+
+    <script src="../scripts/settings.js"></script>
+</body>
+
+</html>

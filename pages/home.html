@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" class="v-kernel-host">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANTIX // HOME</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;500;800&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0" />
+    <link rel="stylesheet" href="../styles/home.css">
+</head>
+
+<body class="v-home-surface">
+
+    <div class="v-system-bg">
+        <div class="v-scanline"></div>
+        <div class="v-noise"></div>
+        <div class="v-grid-engine"></div>
+        <div class="v-godrays"></div>
+    </div>
+
+    <div class="v-app-container">
+        <header class="v-home-header">
+            <div class="v-header-left">
+                <div class="v-info-block">
+                    <small>LATENCY</small>
+                    <span id="v-ping">--MS</span>
+                </div>
+            </div>
+
+            <div class="v-header-center">
+                <div class="v-info-block">
+                    <small>SYSTEM TIME</small>
+                    <span id="v-clock">00:00:00</span>
+                </div>
+            </div>
+
+            <div class="v-header-right">
+                <div class="v-battery-module">
+                    <div class="v-battery-container">
+                        <div class="v-battery-shell">
+                            <div class="v-battery-fill" id="v-bat-fill"></div>
+                            <span class="material-symbols-rounded v-bolt-icon" id="v-bolt-icon">bolt</span>
+                        </div>
+                        <span class="v-battery-percent" id="v-bat-percent">--</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="v-home-content">
+            <section class="v-hero-banner">
+                <div class="hero-inner">
+                    <div class="hero-text-group">
+                        <h2 class="hero-title" id="hero-text">&nbsp;</h2>
+                        <p class="hero-subtitle">Geeyurt games world is now revamped! Explore high-quality games here!!</p>
+                    </div>
+                    <div class="hero-actions">
+                        <button class="v-btn v-btn-accent"
+                            onclick="document.querySelector('.trending-section').scrollIntoView({behavior:'smooth'})">EXPLORE
+                            GAMES</button>
+                        <button class="v-btn v-btn-secondary">VIEW FAVORITES</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="trending-section">
+                <div class="section-header">
+                    <h3 class="section-title">TRENDING NOW</h3>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="trending-grid">
+                    <div class="trend-card" onclick="window.location.href='games.html?launch=Drive Mad'">
+                        <div class="card-image">
+                            <img src="../images/drivemadbanner.webp" alt="Drive Mad">
+                            <div class="card-gradient"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-tag">DRIVING</span>
+                                <span class="card-play"><span class="material-symbols-rounded">play_circle</span></span>
+                            </div>
+                            <h4>Drive Mad</h4>
+                            <p>Drive through many obstacles</p>
+                        </div>
+                    </div>
+
+                    <div class="trend-card" onclick="window.location.href='games.html?launch=Basket Random'">
+                        <div class="card-image">
+                            <img src="../images/basketrandombanner.jpg" alt="Drive Mad">
+                            <div class="card-gradient"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-tag">SPORTS</span>
+                                <span class="card-play"><span class="material-symbols-rounded">play_circle</span></span>
+                            </div>
+                            <h4>Basket Random</h4>
+                            <p>Play against either CPU or your friends! First to 5 baskets wins!</p>
+                        </div>
+                    </div>
+
+                    <div class="trend-card" onclick="window.location.href='games.html?launch=Space Waves'">
+                        <div class="card-image">
+                            <img src="../images/spacwavesbanner.jpg" alt="Space Waves">
+                            <div class="card-gradient"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-tag">SKILL</span>
+                                <span class="card-play"><span class="material-symbols-rounded">play_circle</span></span>
+                            </div>
+                            <h4>Space Waves</h4>
+                            <p>Master the wave levels</p>
+                        </div>
+                    </div>
+
+                    <div class="trend-card" onclick="window.location.href='games.html?launch=1v1 LOL'">
+                        <div class="card-image">
+                            <img src="../images/1v1lolbanner.jpg" alt="1v1 LOL">
+                            <div class="card-gradient"></div>
+                        </div>
+                        <div class="card-content">
+                            <div class="card-meta">
+                                <span class="card-tag">COMBAT</span>
+                                <span class="card-play"><span class="material-symbols-rounded">play_circle</span></span>
+                            </div>
+                            <h4>1v1 LOL</h4>
+                            <p>Build and shoot to win</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="stats-section">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <span class="material-symbols-rounded">sports_esports</span>
+                    </div>
+                    <div class="stat-text">
+                        <h4>300+</h4>
+                        <p>Games Available</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <span class="material-symbols-rounded">speed</span>
+                    </div>
+                    <div class="stat-text">
+                        <h4>LOW</h4>
+                        <p>Latency</p>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <span class="material-symbols-rounded">shield</span>
+                    </div>
+                    <div class="stat-text">
+                        <h4>STORE DATA</h4>
+                        <p>Across devices</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../scripts/home.js"></script>
+    <script>
+        function checkForAutoLaunch() {
+            const params = new URLSearchParams(window.location.search);
+            const gameToLaunch = params.get('launch');
+
+            if (gameToLaunch) {
+                console.log(`[KERNEL] Auto-launching: ${gameToLaunch}`);
+
+                // Ensure your actual game-loading function is named launchGame
+                if (typeof window.launchGame === "function") {
+                    window.launchGame(gameToLaunch);
+                } else {
+                    setTimeout(() => window.launchGame(gameToLaunch), 500);
+                }
+            }
+        }
+
+        window.addEventListener('load', checkForAutoLaunch);
+    </script>
+</body>
+
+</html>

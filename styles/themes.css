@@ -1,0 +1,106 @@
+/* Default Theme Variables */
+:root {
+    --bg-dark: #080c10;
+    --bg-card: #0d1624;
+    --accent: #ff9900;
+    --text: #ffffff;
+}
+
+/* Mocha Theme */
+.theme-mocha {
+    --bg-dark: #1e1e2e;
+    --bg-card: #313244;
+    --accent: #f5c2e7;
+}
+
+/* Midnight Theme */
+.theme-midnight {
+    --bg-dark: #000000;
+    --bg-card: #111111;
+    --accent: #00ff41;
+}
+
+/* Ocean Theme */
+.theme-ocean {
+    --bg-dark: #0a192f;
+    --bg-card: #112240;
+    --accent: #64ffda;
+}
+
+/* Cyberpunk Theme */
+.theme-cyberpunk {
+    --bg-dark: #0d0221;
+    --bg-card: #1a0033;
+    --accent: #ff006e;
+}
+
+/* Forest Theme */
+.theme-forest {
+    --bg-dark: #0f2818;
+    --bg-card: #1a4d2e;
+    --accent: #76c893;
+}
+
+/* Sunset Theme */
+.theme-sunset {
+    --bg-dark: #2d1b00;
+    --bg-card: #4a2511;
+    --accent: #ff8c42;
+}
+
+/* Lavender Theme */
+.theme-lavender {
+    --bg-dark: #2d1b4e;
+    --bg-card: #4a2d6b;
+    --accent: #c896ff;
+}
+
+/* Emerald Theme */
+.theme-emerald {
+    --bg-dark: #0f2818;
+    --bg-card: #1d3d2e;
+    --accent: #2ecc71;
+}
+
+/* Strawberry Theme */
+.theme-strawberry {
+    --bg-dark: #3d1e2d;
+    --bg-card: #5a2d42;
+    --accent: #ff6b9d;
+}
+
+/* Deep Space Theme */
+.theme-deep-space {
+    --bg-dark: #0a0e27;
+    --bg-card: #1a1a3e;
+    --accent: #00d4ff;
+}
+
+/* Sunset Blaze Theme */
+.theme-sunset-blaze {
+    --bg-dark: #1a0f0a;
+    --bg-card: #3d1f15;
+    --accent: #ff4500;
+}
+
+/* Mint Theme */
+.theme-mint {
+    --bg-dark: #1a3a3a;
+    --bg-card: #2d5a5a;
+    --accent: #00d9d9;
+}
+
+/* Noir Theme */
+.theme-noir {
+    --bg-dark: #1a1a1a;
+    --bg-card: #2d2d2d;
+    --accent: #e8e8e8;
+}
+
+
+
+.theme-light {
+    --bg-deep: #ffffff;
+    --bg-card: rgba(202, 202, 202, 0.7);
+    --accent: #000000;
+}

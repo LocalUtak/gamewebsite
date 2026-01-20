@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+/* CRITICAL: This ensures 100% height works correctly */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box; /* Prevents the box from overflowing the screen */
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #172430;
+    color: white;
+}
+
+.errorbox {
+    /* Scaling logic */
+    width: calc(100% - 50px); 
+    height: calc(100% - 50px);
+    
+    /* Design */
+    background-color: rgba(23, 35, 53, 0.7);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    
+    /* Layout */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
