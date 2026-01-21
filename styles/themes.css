@@ -104,3 +104,11 @@
     --bg-card: rgba(202, 202, 202, 0.7);
     --accent: #000000;
 }
+
+.theme-sakura {
+    --bg-deep: #a10099;
+    --bg-panel: rgba(206, 27, 206, 0.95);
+    --bg-card: rgba(201, 62, 194, 0.822);
+    --accent: #f857fd;
+    --accent-glow: rgba(255, 50, 245, 0.2);
+}

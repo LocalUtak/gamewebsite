@@ -136,6 +136,18 @@
     --accent-glow: rgba(201, 201, 201, 0.1);
 }
 
+.theme-sakura {
+    --bg-deep: #ffc2d1;  
+    --bg-dark: #5c2b49;         /* Solid Candy Pink */
+    --bg-panel: rgba(255, 153, 172, 0.8); /* Slightly darker pink glass */
+    --bg-card: rgba(255, 179, 193, 0.9);  /* Creamy Pink Card */
+    --accent: #ff4d6d;            /* Vibrant Rose (The "Punch") */
+    --accent-glow: rgba(255, 77, 145, 0.4);
+    --text: #ff45a2;              /* Deep Magenta (For perfect reading) */
+    --text-dim: #c9184a;
+    --border: #ff758f;            /* Bright Pink Border */
+}
+
 /* GLOBAL RESET */
 * {
     box-sizing: border-box;
