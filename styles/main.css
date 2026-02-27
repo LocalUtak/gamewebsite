@@ -468,3 +468,78 @@ body.system-ready #viewport-host {
     height: 100%;
     border: none;
 }
+
+/* --- RESPONSIVE SCALING (based on 2560x1440 baseline) --- */
+:root {
+    --scale-base: clamp(0.6, calc(100vw / 2560), 1);
+    --sidebar-w: clamp(260px, 16vw, 420px);
+    --topbar-h: clamp(56px, 6vh, 85px);
+    --logo-size: clamp(40px, 2.5vw, 72px);
+    --viewport-pad: clamp(12px, 1.2vw, 48px);
+    --card-radius: clamp(12px, 1vw, 35px);
+    --grid-gap: clamp(12px, 1vw, 30px);
+}
+
+/* Apply responsive variables to key layout pieces */
+#mainframe-sidebar {
+    width: var(--sidebar-w);
+}
+.core-logo {
+    width: var(--logo-size);
+    height: var(--logo-size);
+}
+.brand-h1 {
+    font-size: clamp(1rem, 1.6vw, 1.8rem);
+}
+.sb-branding {
+    padding: clamp(24px, 3vw, 60px) 0 30px 0;
+    gap: clamp(10px, 1.5vw, 20px);
+}
+#viewport-host {
+    padding: var(--viewport-pad);
+}
+.viewport-shell {
+    border-radius: var(--card-radius);
+}
+.nav-link {
+    padding: clamp(12px, 1.2vw, 25px);
+    border-radius: clamp(8px, 1vw, 15px);
+}
+
+/* Small and medium device adjustments */
+@media (max-width: 1200px) {
+    #mainframe-sidebar {
+        transform: translateX(-100%);
+        position: fixed;
+        z-index: 1100;
+    }
+    body {
+        overflow: auto;
+    }
+    .viewport-shell {
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        border-radius: 18px;
+    }
+}
+
+@media (max-width: 900px) {
+    #mainframe-sidebar {
+        display: none;
+    }
+    .brand-h1 {
+        letter-spacing: 3px;
+    }
+    .sb-branding {
+        padding: 16px 12px;
+    }
+    .nav-link {
+        gap: 12px;
+        padding: 10px 12px;
+    }
+    .viewport-shell {
+        border-radius: 10px;
+    }
+    #viewport-host {
+        padding: 12px;
+    }
+}

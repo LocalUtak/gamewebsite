@@ -378,8 +378,8 @@ body {
     border-right: 1px solid var(--border);
     display: flex;
     flex-direction: column;
-    padding: 40px;
-    gap: 30px;
+    padding: 56px;
+    gap: 36px;
 }
 
 .v-diag-header {
@@ -533,7 +533,7 @@ body {
 .glass {
     background: var(--bg-panel);
     border: 1px solid var(--border);
-    padding: 40px;
+    padding: 48px;
     border-radius: 24px;
     backdrop-filter: blur(20px);
 }
@@ -833,12 +833,12 @@ body {
 .v-data-stat-card {
     background: var(--bg-panel);
     border: 1px solid var(--border);
-    padding: 40px;
+    padding: 52px;
     border-radius: 24px;
     backdrop-filter: blur(20px);
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 36px;
     transition: 0.3s;
 }
 
@@ -895,4 +895,46 @@ body {
 
 .text-danger {
     color: var(--danger);
+}
+
+/* --- RESPONSIVE OVERRIDES --- */
+:root {
+    --sidebar-w: clamp(260px, 16vw, 420px);
+    --topbar-h: clamp(56px, 6vh, 95px);
+    --viewport-pad: clamp(18px, 3vw, 80px);
+    --grid-gap: clamp(14px, 1.2vw, 30px);
+}
+
+.v-viewport {
+    padding: var(--viewport-pad);
+}
+
+.v-top-hub {
+    height: var(--topbar-h);
+    padding: 0 clamp(12px, 2vw, 40px);
+}
+
+.v-sidebar-diag {
+    width: var(--sidebar-w);
+    padding: clamp(16px, 2.5vw, 40px);
+}
+
+.v-preset-grid {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: var(--grid-gap);
+}
+
+@media (max-width: 900px) {
+    .v-sidebar-diag {
+        display: none;
+    }
+    .v-top-hub {
+        padding: 0 12px;
+    }
+    .v-viewport {
+        padding: 12px;
+    }
+    html, body {
+        overflow: auto;
+    }
 }

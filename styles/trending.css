@@ -1,0 +1,30 @@
+/* Trending page responsive helpers */
+:root {
+    --viewport-pad: clamp(12px, 2vw, 40px);
+    --grid-gap: clamp(12px, 1.2vw, 24px);
+}
+
+.trending-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: var(--viewport-pad);
+}
+
+.trending-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--grid-gap);
+}
+
+.trending-item {
+    background: var(--bg-card, rgba(20,20,20,0.7));
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 12px;
+}
+
+@media (max-width: 600px) {
+    .trending-grid { grid-template-columns: repeat(2, 1fr); }
+    .trending-container { padding: 12px; }
+}

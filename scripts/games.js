@@ -20,17 +20,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="splash-content">
                 <img id="splash-icon" src="">
                 <h1 id="splash-title" style="margin:0; font-size:3rem; color:#fff;"></h1>
-                <p style="color:var(--accent); letter-spacing:4px; font-weight:800; margin-bottom:30px;">VANTIX ULTRA READY</p>
+                <p style="color:var(--accent); letter-spacing:4px; font-weight:800; margin-bottom:30px;">VANTIX GAME READY</p>
                 <button id="play-now-trigger" class="play-btn-pro">PLAY NOW</button>
             </div>
         </div>
         <div id="game-loader" style="position:absolute; inset:0; bottom:90px; background:var(--bg-dark); display:none; flex-direction:column; align-items:center; justify-content:center; z-index:11;">
             <div class="v-spinner"></div>
-            <p style="margin-top:20px; color:var(--accent); font-weight:800; letter-spacing:2px;">LOADING ENGINE...</p>
+            <p style="margin-top:20px; color:var(--accent); font-weight:800; letter-spacing:2px;">LOADING GAME...</p>
         </div>
         <iframe id="game-iframe" style="display:none;" allow="autoplay; fullscreen; keyboard"></iframe>
         <div class="game-controls">
-            <span id="active-game-name">STANDBY...</span>
+            <span id="active-game-name">LOADING...</span>
             <div class="btn-group">
                 <button class="control-btn" id="fav-btn" data-tip="Favorite"><span class="material-symbols-rounded">star</span></button>
                 <button class="control-btn" id="cloak-btn" data-tip="Secret Tab"><span class="material-symbols-rounded">open_in_new</span></button>
