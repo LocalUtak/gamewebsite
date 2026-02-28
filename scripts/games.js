@@ -136,8 +136,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const val = e.target.value.toLowerCase();
         document.querySelectorAll('.game-grid a').forEach(card => {
             const name = card.querySelector('img').alt.toLowerCase();
-            card.classList.toggle('loaded', name.includes(val));
-            card.style.display = name.includes(val) ? 'block' : 'none';
+            const match = name.includes(val);
+            card.classList.toggle('loaded', match);
+            card.style.display = match ? 'flex' : 'none';
         });
     };
 

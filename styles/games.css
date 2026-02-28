@@ -336,6 +336,13 @@ body {
     color: var(--text);
     font-size: 0.85rem;
     letter-spacing: 0.5px;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* --- 4. OVERLAY & SPLASH --- */
