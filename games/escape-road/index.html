@@ -48,24 +48,9 @@
 			config.eventLog=false;
 		}
 		config.enableMoreGame="yes";
-		config.enablePromotion = false;/*
+		config.enablePromotion = false;
 		config.gdHost=isHostOnGD();
 		
-		if(config.gdHost){
-			config.enableMoreGame="no";
-			config.enablePromotion = false;
-			config.eventLog = false;
-			let pathSegments = window.location.pathname.split('/');
-			config.gdGameId = pathSegments[1];
-		}
-		function isHostOnGD() {
-			/*
-			let domainParts = window.location.hostname.split('.');
-			let mainDomain = domainParts.slice(-2).join('.');
-			return (mainDomain=="gamedistribution.com");
-			*
-			return true;
-		} */
 	</script>
 	<script id="gmsoft-jssdk" src="gmsoftsdk_v5-renamed-so-it-cant-fetch.js"></script>
 </head>

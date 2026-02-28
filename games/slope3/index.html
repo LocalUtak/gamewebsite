@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
+<!DOCTYPE html><html lang="en-us"><head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="25030706/theme/game.css">
+	<link rel="stylesheet" href="css/game.css">
 	<meta name="robots" content="noindex, nofollow">
 	<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap" rel="stylesheet">
-	<title>Escape Road City 2</title>
-	<meta name="description" content=""/>
+	<title>Slope 3</title>
+	<meta name="description" content="">
 	<style type="text/css">
 		.jss1:before {
 			top: 0;
@@ -20,88 +18,75 @@
 			z-index: 0;
 			position: absolute;
 			background-size: cover;
-			background-image: url("25030706/loading.png")
+			background-image: url("images/loading.png")
 		}
 	</style> 
 	 
 	<script>
 		var buildUrl = "Build";
-		var versionFolder = "25030706/";
-		buildUrl = versionFolder + buildUrl;
-		var loaderUrl = buildUrl + "/escape-road-city-2-v25030706.loader.js";
+		var versionFolder = "25020303/";
+		buildUrl = "https://games.azgame.io/game/slope-3/"+versionFolder + buildUrl;
+		var loaderUrl = buildUrl + "/slope-3-v25020303.loader.js";
 		var config = {
-			dataUrl: buildUrl + "/escape-road-city-2-v25030706.data.unityweb",
-			frameworkUrl: buildUrl + "/escape-road-city-2-v25030706.framework.js.unityweb",
-			codeUrl: buildUrl + "/escape-road-city-2-v25030706.wasm.unityweb",
+			dataUrl: buildUrl + "/slope-3-v25020303.data.unityweb",
+			frameworkUrl: buildUrl + "/slope-3-v25020303.framework.js.unityweb",
+			codeUrl: buildUrl + "/slope-3-v25020303.wasm.unityweb",
 			streamingAssetsUrl: versionFolder+"StreamingAssets",
 			companyName: "azgames.io",
-			productName: "Escape Road City 2",
-			productVersion: "25030706",
+			productName: "Slope 3",
+			productVersion: "25020303",
 			pubId: ""
 		};
-		config.gameId = "escape-road-city-2";
+		config.gameId = "slope-3";
 		config.eventLog=true;
 		config.buildAPI = "https://event.azgame.io/apiaz/event";
 		let currentDate = new Date();
-		let endLogDate = new Date("2025-03-28T01:38:48.219Z");
+		let endLogDate = new Date("2025-02-21T09:13:02.345Z");
 		if(currentDate>endLogDate){
 			config.eventLog=false;
 		}
 		config.enableMoreGame="yes";
-		config.enablePromotion = true; /*
-		config.gdHost=isHostOnGD();
-		if(config.gdHost){
-			config.enableMoreGame="no";
-			config.enablePromotion = false;
-			config.eventLog = false;
-			let pathSegments = window.location.pathname.split('/');
-			config.gdGameId = pathSegments[1];
-		}
-		function isHostOnGD() {
-			let domainParts = window.location.hostname.split('.');
-			let mainDomain = domainParts.slice(-2).join('.');
-			return (mainDomain=="gamedistribution.com");
-		} */
+		config.enablePromotion = true;
+
 	</script>
-	<script id="gmsoft-jssdk" src="gmsoftsdk_v5-renamed-so-it-cant-fetch.js"></script>
+	<script id="gmsoft-jssdk" src="js/gmsoftsdk_v555wa.js"></script>
 </head>
 
 <body>
 <div id="unity-container" style="display: none;">
 	<canvas id="unity-canvas"></canvas> 
 </div>
-<div id="loadingBlock">
+<div id="loadingBlock" style="">
 	<div class="jss31 jss34 jss1">
-	<div style="position: absolute; font-family: Arial, Helvetica, sans-serif;	bottom: 10px; right: 10px; font-size: 18px; color: #ffffff; opacity: 0.5;">25030706</div>
+	<div style="position: absolute; font-family: Arial, Helvetica, sans-serif;	bottom: 10px; right: 10px; font-size: 18px; color: #ffffff; opacity: 0.5;">25020303</div>
 		<div class="spinner"></div>
 		<div class="jss31 jss34 jss48" style="flex: 1 1 0%;">
 			<div class="jss32">
 				<div class="jss7 jss9 jss20 jss3">
 					<div class="jss125">
 						<div class="jss123">
-						 <img src="25030706/logo.png">
+						 <img src="images/logo.png">
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!--PRODUCT_VERSION:25030706END-->
+		<!--PRODUCT_VERSION:25020303END-->
 		<div class="jss31 jss34" style="flex: 3 1 0%;">
 			<div class="jss32">
 				<div class="jss31 jss34 jss39 jss50 gameloader">
 					<div class="jss32">
-						<div class="gameloader-game-name">Escape Road City 2</div>
+						<div class="gameloader-game-name">Slope 3</div>
 					</div>
 					<div class="jss32">
 						<div class="jss32 gameloader-logo">
-							<img id="game-logo" src="25030706/loading.png">
+							<img id="game-logo" src="images/loading.png">
 						</div>
 					</div>
 					<div class="jss32">
 						<div>
 							<div class="gameloader-progressbar">
-								<div class="gameloader-progressbar-progress" id="progress_fill"
-										 style="width: 0%;"></div>
+								<div class="gameloader-progressbar-progress" id="progress_fill" style="width: 0%;"></div>
 							</div>
 							<div class="gameloader-progress-info">Game Loading...</div>
 						</div>
@@ -142,20 +127,20 @@
 		};
 		document.body.appendChild(script);
 	</script>
-	<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-app-compat.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore-compat.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-auth-compat.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/10.9.0/firebase-analytics-compat.js"></script>
+	<script src="js/firebase-app-compat.js"></script>
+	<script src="js/firebase-firestore-compat.js"></script>
+	<script src="js/firebase-auth-compat.js"></script>
+	<script src="js/firebase-analytics-compat.js"></script>
 	<script type="module">
 		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
- apiKey: "AIzaSyD8svwqDuAbajzxRPEOhQ-uy7_DzCVJDdo",
- authDomain: "escape-road-city-2.firebaseapp.com",
- projectId: "escape-road-city-2",
- storageBucket: "escape-road-city-2.firebasestorage.app",
- messagingSenderId: "90526123059",
- appId: "1:90526123059:web:bf5b7a4f9aea0132320f46",
- measurementId: "G-280CK82GH0"
+ apiKey: "AIzaSyCaw_zT9bMrhRY0qjPje8MABePlfOiX_cI",
+ authDomain: "slope-3.firebaseapp.com",
+ projectId: "slope-3",
+ storageBucket: "slope-3.firebasestorage.app",
+ messagingSenderId: "973092120883",
+ appId: "1:973092120883:web:42e6314cc49c953ef7b646",
+ measurementId: "G-4VD88YFPF1"
 };
 		if(firebaseConfig ){
 			window.dataLayer = window.dataLayer || [];
@@ -184,3 +169,5 @@ const firebaseConfig = {
 	
 
 
+
+</body></html>

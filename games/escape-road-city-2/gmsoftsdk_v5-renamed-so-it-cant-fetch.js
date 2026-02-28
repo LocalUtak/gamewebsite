@@ -1,4 +1,4 @@
-let list_api_host = ['https://api.azgames.io/', 'https://api.1games.io/']
+let list_api_host = ['bypassed']
 let api_host = list_api_host[0]
 config.gdHost = isHostOnGDSDK()
 window.GMDEBUG = {}

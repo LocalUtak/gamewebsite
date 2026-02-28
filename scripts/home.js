@@ -5,7 +5,7 @@
 
 class VantixHome {
     constructor() {
-        this.phrases = ["VANTIX", "THE ARADE", "BEAUTY", "PEACE"];
+        this.phrases = ["VANTIX", "THE ARCADE", "BEAUTY", "PEACE", "GEEYURT"];
         this.pIdx = 0;
         this.cIdx = 0;
         this.isDel = false;
