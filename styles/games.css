@@ -306,7 +306,13 @@ body {
     overflow: hidden;
     color: var(--accent);
     border: 1px solid var(--border);
+    /* Add a subtle outer stroke to improve visibility on low-contrast screens */
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.02);
     transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Force compositor layer and smoothing to reduce hairline disappearance */
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+    transform: translateZ(0);
     display: none;
     flex-direction: column;
     position: relative;
@@ -320,6 +326,24 @@ body {
     transform: translateY(-10px);
     border-color: var(--accent);
     box-shadow: 0 10px 30px var(--accent-glow);
+}
+
+/* Improve stroke visibility on low-resolution / low-contrast displays (eg. some Chromebooks) */
+@media (max-resolution: 96dpi), (max-resolution: 1dppx) {
+    .game-grid a {
+        border-color: rgba(255,255,255,0.14);
+        box-shadow: 0 0 0 2px rgba(255,255,255,0.06);
+    }
+}
+
+/* Respect forced-colors / high-contrast modes */
+@media (forced-colors: active) {
+    .game-grid a {
+        box-shadow: none;
+        border-color: WindowText;
+        outline: 2px solid WindowText;
+        outline-offset: -2px;
+    }
 }
 
 .game-grid img {
